@@ -1,0 +1,85 @@
+.cartTab {
+  width: 350px;
+  background-color: #343a40;
+  color: #eee;
+  position: fixed;
+  inset: 0 -350px 0 auto;
+  display: grid;
+  grid-template-rows: 70px 1fr 70px;
+  animation: ease-out;
+  animation-name: runRight;
+  animation-duration: 0.5s;
+}
+.cartTab h1 {
+  padding: 20px;
+  margin: 0;
+  font-weight: 300;
+}
+.cartTab .cartBtn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.cartTab .cartBtn button {
+  background-color: #ffc107;
+  border: none;
+  font-family: Poppins;
+  font-weight: 500;
+  cursor: pointer;
+  outline: 0;
+}
+.cartTab .cartBtn .cartClose {
+  background-color: #eee;
+}
+.cartTab .listCart {
+  overflow: auto;
+  scrollbar-width: none;
+}
+.cartTab .listCart .listCartItem {
+  display: grid;
+  grid-template-columns: 70px 70px 70px 1fr;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+}
+.cartTab .listCart .listCartItem img {
+  width: 100%;
+}
+.cartTab .listCart .itemQuantity span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #eee;
+  color: #555;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.cartTab .listCart .itemQuantity span :nth-child(2) {
+  background-color: transparent;
+  color: #eee;
+}
+
+body.showCart .cartTab {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  animation: ease-out;
+  animation-name: runLeft;
+  animation-duration: 0.5s;
+}
+
+@keyframes runLeft {
+  0% {
+    right: -350px;
+  }
+  100% {
+    right: 0;
+  }
+}
+@keyframes runRight {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -350px;
+  }
+}/*# sourceMappingURL=carrito.css.map */
